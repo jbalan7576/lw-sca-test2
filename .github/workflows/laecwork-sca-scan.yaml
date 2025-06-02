@@ -36,7 +36,8 @@ jobs:
       - name: Run Lacework SCA Scan on Source Branch 
       #   run: lacework sca scan ./ -f sarif -o /tmp/lacework-scan-master.json
       #   run: lacework sca scan ./ -o /tmp/lacework-scan-master.json
-        run: lacework sca scan ./ -f sarif -o /tmp/lacework-scan-master.sarif
+      #   run: lacework sca scan ./ -f sarif -o /tmp/lacework-scan-master.sarif
+        run: lacework sca scan -f md-summary ./ -o /tmp/lacework-scan.md
       # Scan the source branch code, output in SARIF format, and save to /tmp/lacework-scan-source.json 
 
    
