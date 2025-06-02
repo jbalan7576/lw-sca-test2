@@ -37,7 +37,7 @@ jobs:
       #   run: lacework sca scan ./ -f sarif -o /tmp/lacework-scan-master.json
       #   run: lacework sca scan ./ -o /tmp/lacework-scan-master.json
       #   run: lacework sca scan ./ -f sarif -o /tmp/lacework-scan-master.sarif
-        run: lacework sca scan -f md-summary ./ -o /tmp/lacework-scan.md
+        run: lacework sca scan -f md-summary ./ -o /tmp/lacework-scan-md.md
       # Scan the source branch code, output in SARIF format, and save to /tmp/lacework-scan-source.json 
 
    
@@ -47,7 +47,8 @@ jobs:
         with: 
           name: lacework-comparison-report  # Name of the uploaded artifact 
       #    path: /tmp/lacework-scan-master.json  # Path to the json file
-          path: /tmp/lacework-scan-master.sarif  # Path to the SARIF file	
+      #    path: /tmp/lacework-scan-master.sarif  # Path to the SARIF file
+          path: /tmp/lacework-scan-md.md
 
       # Step 4: Upload the SARIF file for analysis or further use 
       #- name: Upload SARIF File to Github Code Scanning
